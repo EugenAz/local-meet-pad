@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Local Meet Pad",
+  "version": "1.1.0",
+  "description": "Local macropad controls for Google Meet, with microphone state feedback.",
+  "permissions": ["notifications"],
+  "host_permissions": ["https://meet.google.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["https://meet.google.com/*"],
+    "js": ["controls.js", "content.js"],
+    "run_at": "document_idle"
+  }],
+  "action": {
+    "default_title": "Local Meet Pad",
+    "default_icon": "icon.png"
+  },
+  "icons": { "128": "icon.png" },
+  "commands": {
+    "microphone": {
+      "suggested_key": { "default": "Ctrl+Shift+7", "mac": "Command+Shift+7" },
+      "global": true,
+      "description": "Toggle microphone"
+    },
+    "thumbs-up": {
+      "suggested_key": { "default": "Ctrl+Shift+8", "mac": "Command+Shift+8" },
+      "global": true,
+      "description": "Send and verify thumbs-up reaction"
+    },
+    "camera": {
+      "suggested_key": { "default": "Ctrl+Shift+0", "mac": "Command+Shift+0" },
+      "global": true,
+      "description": "Toggle camera"
+    },
+    "hand": {
+      "suggested_key": { "default": "Ctrl+Shift+9", "mac": "Command+Shift+9" },
+      "global": true,
+      "description": "Raise or lower hand"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; object-src 'none'; connect-src 'none'; base-uri 'none'"
+  }
+}
