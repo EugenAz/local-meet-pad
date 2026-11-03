@@ -1,0 +1,12 @@
+model: ch57x-2
+orientation: normal
+rows: 1
+columns: 3
+knobs: 1
+layers:
+  - buttons:
+      - ["f16", "f17", "f18"]
+    knobs:
+      - ccw: "volumedown"
+        press: "mute"
+        cw: "volumeup"

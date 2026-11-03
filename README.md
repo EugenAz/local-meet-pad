@@ -2,6 +2,8 @@
 
 Control Google Meet from a macropad or global keyboard shortcuts—even while another app is in front. Works with Chrome and Chromium browsers. No popup UI: results appear as notifications; clicking the toolbar icon checks mic/camera status.
 
+**Setting up another Mac? Follow the [complete setup guide](docs/SETUP.md)** for the browser, Karabiner, and keypad together.
+
 1. Download or clone this repository.
 2. Open your browser’s Extensions page, enable **Developer mode**, and **Load unpacked** → select `extension/`.
 3. In extension shortcut settings, assign the keys below and set every action to **Global**. Defaults may remain unassigned if the browser rejects them.
